@@ -10,6 +10,16 @@ namespace TP_N3
     {
         static void Main(string[] args)
         {
+            string nombre;
+
+            Console.Clear();
+
+            Console.WriteLine("Ingrese su nombre: ");
+            nombre = Console.ReadLine();
+
+            Console.WriteLine($"BIENVENIDO {nombre}");
+
+            Console.ReadKey();
         }
     }
 }
