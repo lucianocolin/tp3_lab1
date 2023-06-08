@@ -32,6 +32,8 @@ namespace TP_N3
 
             Console.ReadKey(); */
 
+            /*
+
             //EJERCICIO 3:
 
             int[] notas = { 10, 6, 8, 9, 7, 10 };
@@ -40,6 +42,9 @@ namespace TP_N3
 
             Console.Clear();
 
+            //en la variable acumulador se realiza la suma de todas las notas del alumno, para luego ser dividida en la
+            //variable promedio, junto con la cantidad de elementos del vector notas.
+
             for (int i = 0; i < notas.Length; i++)
             {
                 acumulador += notas[i];
@@ -47,6 +52,31 @@ namespace TP_N3
             }
 
             Console.WriteLine($"El promedio del alumno es: {promedio}");
+            Console.WriteLine("EL PUNTO 3 FINALIZÓ");
+
+            Console.ReadKey(); */
+
+            //EJERCICIO 5
+
+            string[] nombres = { "camila", "roberto", "ricardo", "karina", "rosario", "nahuel", "carlos" };
+            string nombreBuscado = "";
+
+            Console.Clear();
+
+            Console.WriteLine("Ingresar un nombre para buscar en el vector:");
+            nombreBuscado = Console.ReadLine();
+
+            for (int i = 0; i < nombres.Length; i++)
+            {
+                if (nombreBuscado === nombres[i])
+                {
+                    Console.WriteLine("El nombre buscado está en el vector");
+                }
+                else
+                {
+                    Console.WriteLine("El nombre buscado no se encuentra en el vector");
+                }
+            }
 
             Console.ReadKey();
         }
