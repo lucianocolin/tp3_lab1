@@ -56,25 +56,47 @@ namespace TP_N3
 
             Console.ReadKey(); */
 
+            /*
             //EJERCICIO 5
 
             string[] nombres = { "camila", "roberto", "ricardo", "karina", "rosario", "nahuel", "carlos" };
             string nombreBuscado = "";
+            int centinela = 0;
 
             Console.Clear();
 
             Console.WriteLine("Ingresar un nombre para buscar en el vector:");
             nombreBuscado = Console.ReadLine();
 
+            //defino una variable centinela, que al estar en 0 indica que no se encontró un nombre en el vector, mientras que
+            //si el nombre se encuentra, ésta pasa a valer "1". Se hace la búsqueda mediante un ciclo for
+
             for (int i = 0; i < nombres.Length; i++)
             {
-                if (nombreBuscado === nombres[i])
+                if (nombres[i] == nombreBuscado)
                 {
-                    Console.WriteLine("El nombre buscado está en el vector");
+                    Console.WriteLine($"El nombre '{nombreBuscado}' está en el vector");
+                    Console.WriteLine("EL PROGRAMA FINALIZÓ");
+                    centinela = 1;
                 }
-                else
+            }
+
+            if (centinela == 0)
+            {
+                Console.WriteLine($"El nombre '{nombreBuscado}' no se encuentra en el vector");
+                Console.WriteLine("EL PROGRAMA FINALIZÓ");
+            }
+
+            Console.ReadKey(); */
+
+            //EJERCICIO 7
+            int[,] numeros = { { 2, 4, 6 }, { 10, 3, 9 }, { 4, 5, 1 } };
+
+            for (int i = 0; i <= numeros.Length; i++)
+            {
+                for (int c = 0; c <= numeros.Length; c++)
                 {
-                    Console.WriteLine("El nombre buscado no se encuentra en el vector");
+                    Console.WriteLine(numeros[i,c]);
                 }
             }
 
