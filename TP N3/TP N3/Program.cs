@@ -89,13 +89,19 @@ namespace TP_N3
 
             Console.ReadKey(); */
 
+            /*
             //EJERCICIO 7
             int[,] numeros = { { 2, 4, 6 }, { 10, 3, 9 }, { 4, 5, 1 } };
             int sumaFilas, sumaColumnas, sumaTotal;
 
+            Console.Clear();
+
             sumaFilas = 0;
             sumaColumnas = 0;
             sumaTotal = 0;
+
+            //declaro una variable que, con cada iteración del ciclo for, va sumando los elementos de las Filas
+            //de mi vector. Luego otra que haga lo mismo con las Columnas, y por último una que realice la suma de ambas.
 
             for (int f = 0; f < numeros.GetLength(0); f++)
             {
@@ -109,7 +115,74 @@ namespace TP_N3
             }
 
             Console.WriteLine(sumaTotal);
+            Console.WriteLine("EL PROGRAMA FINALIZÓ");
 
+            Console.ReadKey(); */
+
+            /*
+            //EJERCICIO 9
+            int[,] matrizA = { 
+                { 14, 42, 32 }, 
+                { 22, 35, 48 }, 
+                { 39, 60, 97 } };
+
+            int[,] matrizB = { 
+                { 32, 65, 19 }, 
+                { 12, 48, 72 }, 
+                { 23, 56, 80 } };
+
+            int[,] sumaMatrices = new int[3, 3];
+
+            //realizo dos ciclos for anidados, uno para las filas y otro para las columnas. En la variable sumaMatrices
+            //inicializo la suma de la matriz A y la matriz B, para luego enseñarla por consola
+
+            Console.Clear();
+
+            for (int f = 0; f < 3; f++)
+            {
+                for (int c = 0; c < 3; c++)
+                {
+                    sumaMatrices[f,c] = matrizA[f, c] + matrizB[f, c];
+                    Console.WriteLine(sumaMatrices[f,c]);
+                }
+            }
+
+            Console.WriteLine("--------------------");
+            Console.WriteLine("EL PROGRAMA FINALIZÓ");
+
+
+            Console.ReadKey(); */
+
+            //EJERCICIO 11
+            string[,] Frutas = { 
+                {"manzana", "pera", "uva"}, 
+                {"naranja", "pera", "kiwi"}, 
+                {"mango", "pera", "limon"} };
+            string nombreABuscar;
+            int centinela = 0;
+
+            Console.Clear();
+
+            Console.WriteLine("Ingrese un nombre para buscar dentro de la matriz:");
+            nombreABuscar = Console.ReadLine();
+
+            for (int f = 0; f < Frutas.GetLength(0); f++)
+            {
+                for (int c = 0; c < Frutas.GetLength(1); c++)
+                {
+                    if (Frutas[f, c] == nombreABuscar)
+                    {
+                        Console.WriteLine($"El nombre '{nombreABuscar}' se encuentra en la matriz");
+                        centinela = 1;
+                    }
+                }
+            }
+
+            if (centinela == 0)
+            {   
+                Console.WriteLine($"El nombre '{nombreABuscar}' no se encuentra en la matriz");
+            }
+            
             Console.ReadKey();
         }
     }
