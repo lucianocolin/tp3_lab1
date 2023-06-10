@@ -91,14 +91,24 @@ namespace TP_N3
 
             //EJERCICIO 7
             int[,] numeros = { { 2, 4, 6 }, { 10, 3, 9 }, { 4, 5, 1 } };
+            int sumaFilas, sumaColumnas, sumaTotal;
 
-            for (int i = 0; i <= numeros.Length; i++)
+            sumaFilas = 0;
+            sumaColumnas = 0;
+            sumaTotal = 0;
+
+            for (int f = 0; f < numeros.GetLength(0); f++)
             {
-                for (int c = 0; c <= numeros.Length; c++)
+                sumaFilas += numeros[f, 0];
+                for (int c = 0; c < numeros.GetLength(1); c++)
                 {
-                    Console.WriteLine(numeros[i,c]);
+                    sumaColumnas += numeros[0, c];
+
+                    sumaTotal = sumaFilas + sumaColumnas;
                 }
             }
+
+            Console.WriteLine(sumaTotal);
 
             Console.ReadKey();
         }
